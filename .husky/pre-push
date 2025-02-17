@@ -1,0 +1,6 @@
+# Run build
+echo '👷 Running build: please wait.... 🚀'
+
+npm run build
+
+echo '👷 No error found: pushing this now.... ✨'

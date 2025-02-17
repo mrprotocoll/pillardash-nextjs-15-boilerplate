@@ -1,0 +1,11 @@
+# Check ESLint Standards
+echo '👷 Running Linters fix. please wait.....‍♂️'
+npx lint-staged ||
+(
+    echo '❌ You have a problem in your code. Fix linters error ❌
+          Run: npm run lint. add changes and try committing again.';
+    false;
+)
+
+echo '👷 No error found: committing this now.... ✨'
+
