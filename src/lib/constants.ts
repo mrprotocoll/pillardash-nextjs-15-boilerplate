@@ -1,6 +1,7 @@
 const CONSTANTS = {
     appUrl: "https://website.dev",
-    appName: "Pillardash Next Boilerplate",
+    appName: "Pillardash",
+    fullName: "Pillardash NextJs Boilerplate",
     slogan: "Build Faster. Deploy Sooner. Scale Better.",
     description:
         "Production-ready Next.js 15 boilerplate with TypeScript, Tailwind CSS, ESLint & Prettier. Ship faster with pre-configured developer tools.",
@@ -14,6 +15,7 @@ const CONSTANTS = {
         instagram: "",
         linkedin: "",
         twitter: "",
+        github: "https://github.com/mrprotocoll/pillardash-nextjs-15-boilerplate",
     },
     colors: {
         primary: "#669100",

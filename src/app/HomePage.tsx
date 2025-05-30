@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 
+import Link from "next/link";
+
 import {
     ChevronDown,
     Code,
@@ -15,6 +17,8 @@ import {
 } from "lucide-react";
 
 import useOnMountUnsafe from "@/hooks/useOnMountUnsafe";
+import CONSTANTS from "@/lib/constants";
+import { ROUTES } from "@/lib/routes";
 
 const HomePage = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -90,7 +94,7 @@ const HomePage = () => {
         {
             number: "01",
             title: "Clone Repository",
-            code: "git clone https://github.com/yourusername/mp-next-boilerplate.git",
+            code: "git clone git@github.com:mrprotocoll/pillardash-nextjs-15-boilerplate.git",
             description: "Get the latest version of the boilerplate",
         },
         {
@@ -144,7 +148,9 @@ const HomePage = () => {
                     <div className='flex h-16 items-center justify-between'>
                         <div className='flex items-center space-x-3'>
                             <div className='flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/25'>
-                                <span className='text-lg font-bold text-white'>Pillardash</span>
+                                <span className='text-lg font-bold text-white'>
+                                    {CONSTANTS.appName}
+                                </span>
                             </div>
                         </div>
 
@@ -167,10 +173,13 @@ const HomePage = () => {
                             >
                                 Components
                             </a>
-                            <button className='flex items-center space-x-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-sm transition-all duration-200 hover:bg-white/20'>
+                            <Link
+                                href={CONSTANTS.socials.github}
+                                className='flex items-center space-x-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-sm transition-all duration-200 hover:bg-white/20'
+                            >
                                 <FolderGit2 className='h-4 w-4' />
                                 <span>GitHub</span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -187,7 +196,7 @@ const HomePage = () => {
                     >
                         <h1 className='mb-6 text-6xl font-black leading-tight md:text-8xl'>
                             <span className='animate-pulse bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-                                Pillardash Next
+                                {CONSTANTS.appName} NextJs
                             </span>
                             <br />
                             <span className='text-white/90'>Boilerplate</span>
@@ -204,20 +213,26 @@ const HomePage = () => {
                     </div>
 
                     <div className='mb-16 flex flex-col items-center justify-center gap-6 sm:flex-row'>
-                        <button className='group relative rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25'>
+                        <Link
+                            href={CONSTANTS.appUrl}
+                            className='group relative rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25'
+                        >
                             <span className='relative z-10 flex items-center space-x-2'>
                                 <Zap className='h-5 w-5' />
                                 <span>Get Started Now</span>
                             </span>
                             <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100' />
-                        </button>
+                        </Link>
 
-                        <button className='group rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10'>
+                        <Link
+                            href={ROUTES.docs}
+                            className='group rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10'
+                        >
                             <span className='flex items-center space-x-2'>
                                 <ExternalLink className='h-5 w-5' />
                                 <span>View Documentation</span>
                             </span>
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Code Preview */}
@@ -348,7 +363,9 @@ const HomePage = () => {
                     <div className='flex flex-col items-center justify-between md:flex-row'>
                         <div className='mb-6 flex items-center space-x-3 md:mb-0'>
                             <div className='flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg'>
-                                <span className='text-lg font-bold text-white'>Pillardash</span>
+                                <span className='text-lg font-bold text-white'>
+                                    {CONSTANTS.appName}
+                                </span>
                             </div>
                             <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-xl font-bold text-transparent'>
                                 Next Boilerplate
@@ -356,26 +373,28 @@ const HomePage = () => {
                         </div>
 
                         <div className='flex space-x-8'>
-                            <a
-                                href='#'
+                            <Link
+                                href={CONSTANTS.socials.github}
+                                target='_blank'
                                 className='flex items-center space-x-2 text-slate-400 transition-colors duration-200 hover:text-white'
                             >
                                 <FolderGit2 className='h-5 w-5' />
                                 <span>GitHub</span>
-                            </a>
-                            <a
-                                href='#'
+                            </Link>
+                            <Link
+                                href={ROUTES.docs}
+                                target='_blank'
                                 className='flex items-center space-x-2 text-slate-400 transition-colors duration-200 hover:text-white'
                             >
                                 <ExternalLink className='h-5 w-5' />
                                 <span>Docs</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
                     <div className='mt-12 border-t border-white/10 pt-8 text-center'>
                         <p className='text-slate-400'>
-                            © 2025 Pillardash Next Boilerplate.
+                            © 2025 {CONSTANTS.appName} NextJs Boilerplate.
                             <span className='bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent'>
                                 {" "}
                                 Built with ❤️ for developers.
