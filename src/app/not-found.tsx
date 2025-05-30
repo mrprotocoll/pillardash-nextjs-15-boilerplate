@@ -3,7 +3,7 @@
 import { NextPage } from "next";
 import { useRouter } from "next/navigation";
 
-import CustomButton from "@/components/utilities/CustomButton";
+import CustomButton from "@/components/utilities/CustomButton/CustomButton";
 
 const Custom404: NextPage = () => {
     const router = useRouter();
