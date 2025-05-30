@@ -1,0 +1,33 @@
+<svg width="100" height="70" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="pillarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="dashGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Pillar Elements -->
+    <rect x="8" y="15" width="6" height="30" fill="url(#pillarGradient)" rx="1"/>
+    <rect x="16" y="10" width="6" height="35" fill="url(#pillarGradient)" rx="1"/>
+    <rect x="24" y="12" width="6" height="33" fill="url(#pillarGradient)" rx="1"/>
+
+    <!-- Dashboard Lines -->
+    <line x1="38" y1="20" x2="48" y2="20" stroke="url(#dashGradient)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="38" y1="28" x2="52" y2="28" stroke="url(#dashGradient)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="38" y1="36" x2="45" y2="36" stroke="url(#dashGradient)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Text -->
+    <text x="62" y="25" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#1F2937">
+        Pillar
+    </text>
+    <text x="62" y="42" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="300" fill="#6B7280">
+        Dash
+    </text>
+
+    <!-- Accent Dot -->
+    <circle cx="54" cy="18" r="2" fill="#EF4444"/>
+</svg>

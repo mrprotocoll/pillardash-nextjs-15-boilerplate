@@ -146,9 +146,6 @@ const HomePage = () => {
                             <div className='flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/25'>
                                 <span className='text-lg font-bold text-white'>Pillardash</span>
                             </div>
-                            <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-xl font-bold text-transparent'>
-                                Next Boilerplate
-                            </span>
                         </div>
 
                         <div className='hidden items-center space-x-8 md:flex'>
