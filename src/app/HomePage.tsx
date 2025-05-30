@@ -20,22 +20,49 @@ import useOnMountUnsafe from "@/hooks/useOnMountUnsafe";
 import CONSTANTS from "@/lib/constants";
 import { ROUTES } from "@/lib/routes";
 
+export const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+};
+
 const HomePage = () => {
     const [scrollY, setScrollY] = useState(0);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [scrollProgress, setScrollProgress] = useState(0);
+
+    const handleScrollToNext = () => {
+        smoothScrollTo("features");
+    };
 
     useOnMountUnsafe(() => {
-        const handleScroll = () => setScrollY(window.scrollY);
+        const handleScroll = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height =
+                document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            setScrollProgress((winScroll / height) * 100);
+            setScrollY(winScroll);
+        };
         const handleMouseMove = (e: MouseEvent) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };
 
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowDown") {
+                handleScrollToNext();
+            }
+        });
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("mousemove", handleMouseMove);
+            window.removeEventListener("keydown", handleScrollToNext);
         };
     });
 
@@ -113,6 +140,10 @@ const HomePage = () => {
 
     return (
         <div className='min-h-screen overflow-hidden bg-slate-950 text-white'>
+            <div
+                className='fixed left-0 top-0 z-50 h-1 bg-gradient-to-r from-blue-500 to-purple-500'
+                style={{ width: `${scrollProgress}%` }}
+            />
             {/* Animated Background */}
             <div className='pointer-events-none fixed inset-0 overflow-hidden'>
                 <div
@@ -261,9 +292,13 @@ const HomePage = () => {
                 </div>
 
                 {/* Scroll Indicator */}
-                <div className='absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce'>
-                    <ChevronDown className='h-6 w-6 text-slate-400' />
-                </div>
+                <button
+                    onClick={handleScrollToNext}
+                    className='absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce focus:outline-none'
+                    aria-label='Scroll to next section'
+                >
+                    <ChevronDown className='h-6 w-6 text-slate-400 transition-colors duration-200 hover:text-white' />
+                </button>
             </section>
 
             {/* Features Section */}
