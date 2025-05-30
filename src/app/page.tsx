@@ -1,7 +1,7 @@
-export default function Home() {
-    return (
-        <>
-            <h1>MP NextJs Boilerplate</h1>
-        </>
-    );
-}
+import HomePage from "@/components/layouts/HomePage";
+
+const Page = () => {
+    return <HomePage />;
+};
+
+export default Page;
