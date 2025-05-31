@@ -51,6 +51,8 @@ A production-ready Next.js 15 foundation with cutting-edge tools and optimized c
 
   npm install
 ```
+2. **Update `/lib/constants.ts`:**
+ - Update CONSTANTS to suit your project
 
 ## Usage
 
