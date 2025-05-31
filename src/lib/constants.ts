@@ -1,5 +1,5 @@
 const CONSTANTS = {
-    appUrl: "https://website.dev",
+    appUrl: "https://pillardash.mrprotocol.dev",
     appName: "Pillardash",
     fullName: "Pillardash NextJs Boilerplate",
     slogan: "Build Faster. Deploy Sooner. Scale Better.",
