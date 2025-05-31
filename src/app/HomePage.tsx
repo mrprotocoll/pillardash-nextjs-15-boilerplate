@@ -245,7 +245,7 @@ const HomePage = () => {
 
                     <div className='mb-16 flex flex-col items-center justify-center gap-6 sm:flex-row'>
                         <Link
-                            href={CONSTANTS.appUrl}
+                            href={CONSTANTS.socials.github}
                             className='group relative rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25'
                         >
                             <span className='relative z-10 flex items-center space-x-2'>
