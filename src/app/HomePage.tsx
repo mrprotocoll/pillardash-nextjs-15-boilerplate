@@ -205,6 +205,12 @@ const HomePage = () => {
                                 Components
                             </a>
                             <Link
+                                href={ROUTES.signup}
+                                className='text-slate-300 transition-colors duration-200 hover:text-white'
+                            >
+                                <span>Auth Page</span>
+                            </Link>
+                            <Link
                                 href={CONSTANTS.socials.github}
                                 className='flex items-center space-x-2 rounded-lg border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-sm transition-all duration-200 hover:bg-white/20'
                             >

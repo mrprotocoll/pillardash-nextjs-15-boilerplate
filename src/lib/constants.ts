@@ -18,9 +18,13 @@ const CONSTANTS = {
         github: "https://github.com/mrprotocoll/pillardash-nextjs-15-boilerplate",
     },
     colors: {
-        primary: "#669100",
+        primary: "#1F8280",
+        secondary: "#086AD877",
     },
     phoneNumber: "+234 1235325222",
+    dev: {
+        emailVerifyKey: "",
+    },
     keywords: [
         // High-Volume Commercial Keywords
         "Pillardash",

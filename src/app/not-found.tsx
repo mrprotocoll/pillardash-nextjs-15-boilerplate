@@ -3,7 +3,9 @@
 import { NextPage } from "next";
 import { useRouter } from "next/navigation";
 
-import CustomButton from "@/components/utilities/CustomButton/CustomButton";
+import { Button } from "pillardash-ui-react";
+
+import CONSTANTS from "@/lib/constants";
 
 const Custom404: NextPage = () => {
     const router = useRouter();
@@ -33,7 +35,7 @@ const Custom404: NextPage = () => {
                             <div className='h-0.5 w-3 rounded-full bg-gradient-to-r from-green-500 to-green-400'></div>
                         </div>
                     </div>
-                    <h1 className='text-2xl font-bold text-gray-900'>PillarDash</h1>
+                    <h1 className='text-2xl font-bold text-gray-900'>{CONSTANTS.appName}</h1>
                 </div>
 
                 {/* 404 Error */}
@@ -48,7 +50,7 @@ const Custom404: NextPage = () => {
 
                 {/* Action Buttons */}
                 <div className='mb-8 flex flex-col justify-center gap-4 sm:flex-row'>
-                    <CustomButton
+                    <Button
                         onClick={handleGoHome}
                         size='large'
                         variant='primary'
@@ -69,9 +71,9 @@ const Custom404: NextPage = () => {
                         }
                     >
                         Go Home
-                    </CustomButton>
+                    </Button>
 
-                    <CustomButton
+                    <Button
                         onClick={handleGoBack}
                         size='large'
                         variant='neutral'
@@ -92,7 +94,7 @@ const Custom404: NextPage = () => {
                         }
                     >
                         Go Back
-                    </CustomButton>
+                    </Button>
                 </div>
             </div>
         </div>
