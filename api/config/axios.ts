@@ -7,7 +7,7 @@ import { logout } from "@/redux/reducers/authSlice";
 import { store } from "@/redux/store";
 
 const axios = Axios.create({
-    baseURL: process.env.NEXT_PUBLIC_BACKEND_URL || "https://api.domain.com/v1",
+    baseURL: process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:4000/v1",
     timeout: 30000,
     headers: {
         "Content-Type": "application/json",

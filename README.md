@@ -44,7 +44,7 @@ A production-ready Next.js 16 foundation with cutting-edge tools and optimized c
 
 ```bash
   git clone git@github.com:mrprotocoll/pillardash-nextjs-15-boilerplate.git
-  cd project
+  cd pillardash-nextjs-15-boilerplate
 
   npm install
 ```

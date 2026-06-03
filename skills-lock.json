@@ -1,0 +1,77 @@
+{
+    "version": 1,
+    "skills": {
+        "next-upgrade": {
+            "source": "vercel-labs/next-skills",
+            "sourceType": "github",
+            "skillPath": "skills/next-upgrade/SKILL.md",
+            "computedHash": "e3aeb1f9e8a68d24df0c1c2e3c8ab97ede09a7251a2c76988318d02254346979"
+        },
+        "nextjs-turbopack": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/nextjs-turbopack/SKILL.md",
+            "computedHash": "f65da15aabeb9dca7ae08525739e72ab16e79a78ff4004f7cab6ad2de1c2a79b"
+        },
+        "frontend-patterns": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/frontend-patterns/SKILL.md",
+            "computedHash": "dd04a1c02503036ee7f4d649c9b7b75d2e6954a94d6f464faedfa992701d1978"
+        },
+        "api-design": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/api-design/SKILL.md",
+            "computedHash": "d2b090c4319e030fddb576950400724ff12ccb285083a540b6afb62431185d25"
+        },
+        "error-handling": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/error-handling/SKILL.md",
+            "computedHash": "0ec0993c0441d0b035da6b9bf246feb41a3fe6825158ee41af4931b5bce17347"
+        },
+        "security-review": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/security-review/SKILL.md",
+            "computedHash": "2488fb9de701c260ba4dcdd085288571c84f35797019de7a3c78634aa3e3dc31"
+        },
+        "seo": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/seo/SKILL.md",
+            "computedHash": "3e560c9da02ca529eda939bd3634635288a252ada6be18c16ad527bb8fab851e"
+        },
+        "git-workflow": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/git-workflow/SKILL.md",
+            "computedHash": "a67d04fc9f1dde4a249bf19a1ecb064f048410083d7dd232e7c2b733db43407a"
+        },
+        "coding-standards": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/coding-standards/SKILL.md",
+            "computedHash": "9407b2ba396656a09026fac8cf4caa73de789bf303fcc2cd20f83a0c3c087812"
+        },
+        "design-system": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/design-system/SKILL.md",
+            "computedHash": "48259261aa52c6f99f92c8dc9d981d5ca312d7e499b2caf67788e6d0569bb4f2"
+        },
+        "make-interfaces-feel-better": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/make-interfaces-feel-better/SKILL.md",
+            "computedHash": "d15b39c7089c8ee67f874a1a4d672cfba4c0135f67669a5e2db255aac341441f"
+        },
+        "frontend-design-direction": {
+            "source": "affaan-m/ECC",
+            "sourceType": "github",
+            "skillPath": "skills/frontend-design-direction/SKILL.md",
+            "computedHash": "4bbf2871e7ae8d5d97bb4e1d72184b6f1bac2a2f5625fcf857d60cc1e1875fbc"
+        }
+    }
+}
