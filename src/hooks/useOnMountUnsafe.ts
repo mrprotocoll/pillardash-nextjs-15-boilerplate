@@ -5,9 +5,11 @@ export default function useOnMountUnsafe(effect: EffectCallback) {
     const initialized = useRef(false);
 
     useEffect(() => {
-        if (!initialized.current) {
-            initialized.current = true;
-            effect();
+        if (initialized.current) {
+            return;
         }
+
+        initialized.current = true;
+        return effect();
     }, [effect]);
 }

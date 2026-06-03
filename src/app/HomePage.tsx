@@ -57,19 +57,20 @@ const HomePage = () => {
         const handleMouseMove = (e: MouseEvent) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };
-
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("mousemove", handleMouseMove);
-        window.addEventListener("keydown", (e) => {
+        const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "ArrowDown") {
                 handleScrollToNext();
             }
-        });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("keydown", handleKeyDown);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("mousemove", handleMouseMove);
-            window.removeEventListener("keydown", handleScrollToNext);
+            window.removeEventListener("keydown", handleKeyDown);
         };
     });
 
